@@ -1,0 +1,111 @@
+
+rooms = {
+    "normal_room": {
+        "numbers": range(1, 100),
+        "price": 80,
+        "capacity": 1
+    },
+    "double_room": {
+        "numbers": range(101, 200),
+        "price": 100,
+        "capacity": 2
+    },
+    "deluxe_room": {
+        "numbers": range(201, 300),
+        "price": 150,
+        "capacity": 2
+    },
+    "conference_room_small": {
+        "numbers": range(301, 310),
+        "price": 80,
+        "capacity": 15
+    },
+    "conference_room_large": {
+        "numbers": range(311, 315),
+        "price": 150,
+        "capacity": 50
+    }
+}
+
+menu = {
+    0: {
+        "name": "water",
+        "price": 2.50,
+        "category": "drink"
+    },
+    1: {
+        "name": "soft-drink",
+        "price": 3,
+        "category": "drink"
+    },
+    2: {
+        "name": "beer",
+        "price": 3.50,
+        "category": "alcoholic-drink"
+    },
+    3: {
+        "name": "wine",
+        "price": 3.50,
+        "category": "alcoholic-drink"
+    },
+    4: {
+        "name": "simple-breakfast",
+        "price": 5,
+        "category": "breakfast"
+    },
+    5: {
+        "name": "french-breakfast",
+        "price": 7,
+        "category": "breakfast"
+    },
+    6: {
+        "name": "deluxe-breakfast",
+        "price": 12,
+        "category": "breakfast"
+    },
+    7: {
+        "name": "simple-lunch",
+        "price": 5,
+        "category": "lunch"
+    },
+    8: {
+        "name": "deluxe-lunch",
+        "price": 10,
+        "category": "lunch"
+    },
+    9: {
+        "name": "steak 'n stuff",
+        "price": 18,
+        "category": "dinner"
+    },
+    10: {
+        "name": "surf 'n turf",
+        "price": 17,
+        "category": "dinner"
+    },
+    11: {
+        "name": "vegetarian lasagna",
+        "price": 16,
+        "category": "dinner"
+    },
+    12: {
+        "name": "spareribs",
+        "price": 17,
+        "category": "dinner"
+    },
+    13: {
+        "name": "super soup",
+        "price": 14,
+        "category": "dinner"
+    },
+    14: {
+        "name": "coffee",
+        "price": 3,
+        "category": "drink"
+    },
+    15: {
+        "name": "tea",
+        "price": 2.5,
+        "category": "drink"
+    }
+}
