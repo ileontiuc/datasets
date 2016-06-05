@@ -109,3 +109,12 @@ menu = {
         "category": "drink"
     }
 }
+
+services = {
+        "decoration_party": 20,
+        "decoration_flowers": 10,
+        "decoration_romantic_flowers": 15,
+        "amusement_clown": 100,
+        "amusement_live_music": 100,
+        "amusement_dj": 90
+}
