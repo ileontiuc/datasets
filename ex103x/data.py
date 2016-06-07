@@ -1,27 +1,27 @@
 
 rooms = {
     "normal_room": {
-        "numbers": range(1, 100),
+        "prefix": "N",
         "price": 80,
         "capacity": 1
     },
     "double_room": {
-        "numbers": range(101, 200),
+        "prefix": "D",
         "price": 100,
         "capacity": 2
     },
     "deluxe_room": {
-        "numbers": range(201, 300),
+        "prefix": "X",
         "price": 150,
         "capacity": 2
     },
     "conference_room_small": {
-        "numbers": range(301, 310),
+        "prefix": "S",
         "price": 80,
         "capacity": 15
     },
     "conference_room_large": {
-        "numbers": range(311, 315),
+        "prefix": "L",
         "price": 150,
         "capacity": 50
     }

@@ -2,6 +2,8 @@
 
 import sys
 import random
+from datetime import datetime
+from datetime import timedelta
 
 #Local files
 import data
@@ -9,28 +11,56 @@ import data
 requests_file_name = "requests"
 filename = "bookings"
 
-def request_confirmed():
-    # Set probability for request to get accepted.
-    return random.randint(0,100) < 80
+class Booking:
+    def __init__(self, booking_id, room_type, start_date, end_date, request_id):
+        self.booking_id = booking_id
+        self.room_type = room_type
+        self.start_date = start_date
+        self.end_date = end_date
+        self.request_id = request_id
+        self.room_no = None
 
-def get_room_from_type(room_type):
-    room_numbers = data.rooms.keys()
-    return random.choice(room_numbers)
+    def __str__(self):
+        return "{}|{}|{}|{}|{}".format(self.booking_id, self.room_no, self.start_date, self.end_date, self.request_id)
 
 def main(args):
-    with open(requests_file_name, "r") as requests:
-        with open(filename, "w") as f:
-            booking_id = 0
-            for request_line in requests:
-                if request_confirmed():
-                    request_line_parts = request_line.split("|")
-                    booking_id += 1
-                    room = get_room_from_type(request_line_parts[2])
-                    start_date = request_line_parts[4]
-                    end_date = request_line_parts[5]
-                    request_id = request_line_parts[0]
-                    f.write("{}|{}|{}|{}|{}\n".format(booking_id, room,
-                        start_date, end_date, request_id))                    
+    bookings = {}
+    unique_bookings = []
+    booking_id = 0
+    # Create 2D map of room requests
+    with open(requests_file_name, "r") as requests_file:
+        request_lines = requests_file.readlines()
+        for request_line in request_lines:
+            booking_id += 1
+            request_line_parts = request_line.split("|")
+            room_type = request_line_parts[2]
+            start_date = datetime.strptime(request_line_parts[4], "%Y-%m-%d").date()
+            end_date = datetime.strptime(request_line_parts[5], "%Y-%m-%d").date()
+            request_id = request_line_parts[0]
+            booking = Booking(booking_id, room_type, start_date, end_date, request_id)
+            unique_bookings.append(booking)
+            for days in range((end_date - start_date).days):
+                key = start_date + timedelta(days)
+                if key not in bookings:
+                    bookings[key] = []
+                bookings[key].append(booking)
+
+    # Assign rooms. No double bookings.
+    for date in bookings.keys():
+        taken_rooms = [booking.room_no for booking in bookings[date] if booking.room_no != None]
+        unassigned = [booking for booking in bookings[date] if booking.room_no == None]
+        for booking in unassigned:
+            prefix = data.rooms[booking.room_type]["prefix"]
+            num = 0
+            room_no = "{}{}".format(prefix, num)
+            while room_no in taken_rooms:
+                num += 1
+                room_no = "{}{}".format(prefix, num)
+            booking.room_no = room_no
+
+    with open(filename, "w") as f:
+        for booking in unique_bookings:
+            f.write("{}\n".format(booking))                    
 
 if __name__ == "__main__":
     random.seed()
