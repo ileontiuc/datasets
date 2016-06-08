@@ -4,6 +4,7 @@ import sys
 import random
 from datetime import datetime
 from datetime import timedelta
+from faker import Faker
 
 # Local files
 import data
@@ -13,12 +14,13 @@ filename = "requests"
 number_of_lines = 5000
 def main(args):
     request_id = 0
+    fake = Faker()
     with open(filename, "w+") as f:
         for i in range(0, number_of_lines):
             request_id += 1
-            client_name = "foo bar"
+            client_name = fake.name()
             room_type = random.choice(data.rooms.keys())
-            request_type = "foorequest"
+            request_type = random.choice(["wedding", "party", "conference"]) if "conference" in room_type else random.choice(["holiday", "business"])
             start_date = datetime.today().date() - timedelta(random.randint(0, 100))
             end_date = start_date + timedelta(random.randint(1, 14))
             num_adults = random.randint(1, 5)
