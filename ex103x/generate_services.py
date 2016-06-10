@@ -18,24 +18,23 @@ def random_date_between(start_date_string, end_date_string):
     return random_date.date()
 
 def main(args):
-    requests = ""
+    bookings = ""
     with open(generate_bookings.filename, "r") as f:
-        requests = f.readlines()
+        bookings = f.readlines()
     with open(filename, "w+") as f:
-        prev_line = ""
-        for request in requests:
-            parts = request.split("|")
-            num_items = random.randint(0,5)
-            for service in range(num_items):
+        for booking in bookings:
+            parts = booking.split("|")
+            num_items = random.randint(0,1)
+            room_prefix = parts[1][0]
+            takes_service = random.random() < 0.6
+            if takes_service: 
                 booking_id = parts[0]
                 service = random.choice(data.services.keys())
                 price = data.services[service]
                 date = random_date_between(parts[2], parts[3])
-                line = "{}|{}|{}|{}\n".format(booking_id, price, service, date)
-                # Prevent double bookings.
-                if line != prev_line:
-                    f.write(line)
-                prev_line = line
+                if room_prefix not in ["S", "L"] and "amusement" in service:
+                    continue
+                f.write("{}|{}|{}|{}\n".format(booking_id, price, service, date))
 
 if __name__ == "__main__":
     random.seed()
