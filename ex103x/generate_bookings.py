@@ -2,6 +2,7 @@
 
 import sys
 import random
+import math
 from datetime import datetime
 from datetime import timedelta
 
@@ -31,19 +32,23 @@ def main(args):
     with open(requests_file_name, "r") as requests_file:
         request_lines = requests_file.readlines()
         for request_line in request_lines:
-            booking_id += 1
             request_line_parts = request_line.split("|")
             room_type = request_line_parts[2]
-            start_date = datetime.strptime(request_line_parts[4], "%Y-%m-%d").date()
-            end_date = datetime.strptime(request_line_parts[5], "%Y-%m-%d").date()
-            request_id = request_line_parts[0]
-            booking = Booking(booking_id, room_type, start_date, end_date, request_id)
-            unique_bookings.append(booking)
-            for days in range((end_date - start_date).days):
-                key = start_date + timedelta(days)
-                if key not in bookings:
-                    bookings[key] = []
-                bookings[key].append(booking)
+            num_people = int(request_line_parts[-1]) + int(request_line_parts[-2])
+            room_capacity = data.rooms[room_type]["capacity"]
+            num_rooms = int(math.ceil(float(num_people) / room_capacity))
+            for _ in range(num_rooms):
+                booking_id += 1
+                start_date = datetime.strptime(request_line_parts[4], "%Y-%m-%d").date()
+                end_date = datetime.strptime(request_line_parts[5], "%Y-%m-%d").date()
+                request_id = request_line_parts[0]
+                booking = Booking(booking_id, room_type, start_date, end_date, request_id)
+                unique_bookings.append(booking)
+                for days in range((end_date - start_date).days):
+                    key = start_date + timedelta(days)
+                    if key not in bookings:
+                        bookings[key] = []
+                    bookings[key].append(booking)
 
     # Assign rooms. No double bookings.
     for date in bookings.keys():

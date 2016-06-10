@@ -8,12 +8,12 @@ rooms = {
     "double_room": {
         "prefix": "D",
         "price": 100,
-        "capacity": 2
+        "capacity": 3
     },
     "deluxe_room": {
         "prefix": "X",
         "price": 150,
-        "capacity": 2
+        "capacity": 3
     },
     "conference_room_small": {
         "prefix": "S",
