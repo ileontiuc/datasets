@@ -1,4 +1,7 @@
 
+import random
+from datetime import datetime
+
 rooms = {
     "normal_room": {
         "prefix": "N",
@@ -118,3 +121,15 @@ services = {
         "amusement_live_music": 100,
         "amusement_dj": 90
 }
+
+def random_date_between_string(start_date_string, end_date_string):
+    start_date = datetime.strptime(start_date_string, "%Y-%m-%d")
+    end_date = datetime.strptime(end_date_string, "%Y-%m-%d")
+    random_date_between(start_date, end_date)
+
+def random_date_between(start_date, end_date):
+    start_stamp = start_date.strftime("%s")
+    end_stamp = end_date.strftime("%s")
+    random_date = datetime.fromtimestamp(random.randint(int(start_stamp), int(end_stamp)))
+    return random_date.date()
+

@@ -32,6 +32,8 @@ def main(args):
     with open(requests_file_name, "r") as requests_file:
         request_lines = requests_file.readlines()
         for request_line in request_lines:
+            if random.random() < 0.05:
+                continue
             request_line_parts = request_line.split("|")
             room_type = request_line_parts[2]
             num_people = int(request_line_parts[-1]) + int(request_line_parts[-2])

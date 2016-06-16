@@ -4,7 +4,6 @@ import sys
 import random
 import math
 from datetime import datetime
-from datetime import timedelta
 from datetime import time
 
 import data
