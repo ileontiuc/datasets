@@ -30,5 +30,5 @@ def main(args):
                 num_children))
 
 if __name__ == "__main__":
-    random.seed()
+    random.seed(0)
     main(sys.argv[1:])

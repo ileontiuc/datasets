@@ -37,6 +37,6 @@ def main(args):
                 f.write("{}|{}|{}|{}\n".format(booking_id, price, service, date))
 
 if __name__ == "__main__":
-    random.seed()
+    random.seed(0)
     main(sys.argv[1:])
 

@@ -68,5 +68,5 @@ def main(args):
             f.write("{}\n".format(booking))                    
 
 if __name__ == "__main__":
-    random.seed()
+    random.seed(0)
     main(sys.argv[1:])
