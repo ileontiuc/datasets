@@ -9,6 +9,7 @@ filename = "rooms"
 def main(args):
     entry_id = 0
     with open(filename, "w+") as f:
+        f.write("id|price/day|capacity|type\n")
         for room in data.rooms.keys():
             entry_id += 1
             price = data.rooms[room]["price"]

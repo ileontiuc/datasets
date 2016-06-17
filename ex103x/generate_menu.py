@@ -8,6 +8,7 @@ filename = "menu"
 
 def main(args):
     with open(filename, "w+") as f:
+        f.write("id|name|price|category\n")
         for item in data.menu.keys():
             name = data.menu[item]["name"]
             price = data.menu[item]["price"]

@@ -13,7 +13,8 @@ def main(args):
     with open(generate_bookings.filename, "r") as f:
         bookings = f.readlines()
     with open(filename, "w+") as f:
-        for booking in bookings:
+        f.write("booking id|price|description|date\n")
+        for booking in bookings[1:]:
             parts = booking.split("|")
             room_prefix = parts[1][0]
             takes_service = random.random() < 0.6

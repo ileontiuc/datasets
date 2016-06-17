@@ -17,6 +17,7 @@ def main(args):
     fake = Faker()
     fake.seed(0)
     with open(filename, "w+") as f:
+        f.write("request id|client name|room type|request type|start date|end date|#adults|#children\n")
         for i in range(0, number_of_lines):
             request_id += 1
             client_name = fake.name()

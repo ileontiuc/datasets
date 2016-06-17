@@ -1,3 +1,4 @@
+id|price/day|capacity|type
 1|150|3|deluxe_room
 2|100|3|double_room
 3|80|15|conference_room_small

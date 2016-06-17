@@ -31,7 +31,7 @@ def main(args):
     # Create 2D map of room requests
     with open(requests_file_name, "r") as requests_file:
         request_lines = requests_file.readlines()
-        for request_line in request_lines:
+        for request_line in request_lines[1:]:
             if random.random() < 0.05:
                 continue
             request_line_parts = request_line.split("|")
@@ -66,6 +66,7 @@ def main(args):
             booking.room_no = room_no
 
     with open(filename, "w") as f:
+        f.write("id|room|start date|end date|request id\n")
         for booking in unique_bookings:
             f.write("{}\n".format(booking))                    
 

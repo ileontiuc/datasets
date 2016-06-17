@@ -51,7 +51,8 @@ def select_dest_room(food_id, order_time, billed_room):
 
 def main(args):
     with open(generate_bookings.filename, "r") as bookings, open(filename, "w+") as f:
-        for booking_line in bookings:
+        f.write("dest room|bill room|date|time|#orders|menu id\n")
+        for booking_line in bookings.readlines()[1:]:
             booking_parts = booking_line.split("|")
             room = room_type_from_prefix(booking_parts[1][0])
             room_capacity = data.rooms[room]["capacity"]
