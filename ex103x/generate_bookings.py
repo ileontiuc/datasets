@@ -55,9 +55,9 @@ def main(args):
 
     # Assign rooms. No double bookings.
     for date in bookings.keys():
-        taken_rooms = [booking.room_no for booking in bookings[date] if booking.room_no != None]
-        unassigned = [booking for booking in bookings[date] if booking.room_no == None]
+        unassigned = [x for x in bookings[date] if x.room_no == None]
         for booking in unassigned:
+            taken_rooms = [x.room_no for x in bookings[date] if x.room_no != None]
             prefix = data.rooms[booking.room_type]["prefix"]
             num = 0
             room_no = "{}{}".format(prefix, num)

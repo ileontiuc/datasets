@@ -14,7 +14,8 @@ def main(args):
             entry_id += 1
             price = data.rooms[room]["price"]
             capacity = data.rooms[room]["capacity"]
-            f.write("{}|{}|{}|{}\n".format(entry_id, price, capacity, room))
+            prefix = data.rooms[room]["prefix"]
+            f.write("{}|{}|{}|{}|{}\n".format(entry_id, price, capacity, room, prefix))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
