@@ -603,6 +603,7 @@ booking id|price|description|date
 1467|20|decoration_party|None
 1468|10|decoration_flowers|None
 1469|20|decoration_party|None
+-|0|decoration_wedding_flowers|None
 1471|20|decoration_party|None
 1472|10|decoration_flowers|None
 1475|20|decoration_party|None
@@ -2765,6 +2766,7 @@ booking id|price|description|date
 6541|100|amusement_live_music|None
 6543|100|amusement_clown|None
 6544|100|amusement_live_music|None
+-|0|amusement_quartet|None
 6545|10|decoration_flowers|None
 6548|10|decoration_flowers|None
 6552|10|decoration_flowers|None
@@ -2886,6 +2888,7 @@ booking id|price|description|date
 6828|10|decoration_flowers|None
 6830|10|decoration_flowers|None
 6831|10|decoration_flowers|None
+-|0|decoration_party_flowers|None
 6837|100|amusement_clown|None
 6838|15|decoration_romantic_flowers|None
 6841|10|decoration_flowers|None
@@ -4370,3 +4373,6 @@ booking id|price|description|date
 10341|100|amusement_live_music|None
 10342|10|decoration_flowers|None
 10346|10|decoration_flowers|None
+
+
+
