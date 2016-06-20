@@ -413,7 +413,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 412|Rossie Kuhlman|normal_room|holiday|2016-03-14|2016-03-20|1|1
 413|Joselin Davis|double_room|holiday|2016-01-30|2016-01-31|1|3
 414|Caryl Stehr|conference_room_large|wedding|2016-01-29|2016-01-30|37|28
-415|Mrs. Arabella Bernhard|normal_room|holiday|2016-01-11|2016-01-13|1|0
+415|Mrs. Arabella Bernhard|normal_room|vacation|2016-01-11|2016-01-13|1|0
 416|Vinson Luettgen I|conference_room_large|wedding|2016-03-25|2016-03-27|34|20
 417|Braden Connelly|double_room|business|2016-03-03|2016-03-10|6|0
 418|Byrd Stracke|double_room|holiday|2016-03-08|2016-03-12|2|0
@@ -1139,7 +1139,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 1138|Ms. Collette Crona|deluxe_room|holiday|2016-01-01|2016-01-05|1|1
 1139|Dr. Madison McGlynn I|conference_room_small|conference|2016-03-11|2016-03-12|41|0
 1140|Burney Kessler|normal_room|holiday|2016-01-17|2016-01-21|1|1
-1141|Miss Wilhelmina Spencer DVM|double_room|business|2016-02-01|2016-02-11|3|1
+1141|Miss Wilhelmina Spencer DVM|Double_room|business|2016-02-01|2016-02-11|3|1
 1142|Melton Keebler|conference_room_small|wedding|2016-01-27|2016-01-29|18|15
 1143|Miss Idell Welch|conference_room_large|party|2016-03-12|2016-03-14|11|42
 1144|Ms. Jacqulyn Jacobs|normal_room|business|2016-03-24|2016-04-04|3|0
@@ -2053,7 +2053,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 2052|Dr. Williams Berge|double_room|holiday|2016-01-04|2016-01-06|5|0
 2053|Ms. Tatum Hirthe|normal_room|business|2016-02-27|2016-03-14|4|0
 2054|Jerald Ward|normal_room|holiday|2016-01-28|2016-01-30|4|0
-2055|Deborah Parisian|deluxe_room|holiday|2016-01-22|2016-01-31|4|0
+2055|Deborah Parisian|deluxe_room|vacation|2016-01-22|2016-01-31|4|0
 2056|Lashanda Ferry|deluxe_room|business|2016-01-22|2016-01-29|3|0
 2057|Adolphus Wisozk|deluxe_room|business|2016-03-04|2016-03-23|1|0
 2058|Sybil Klein|conference_room_small|wedding|2016-01-22|2016-01-24|42|29
@@ -2616,7 +2616,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 2615|Ms. Arlene Schiller|conference_room_large|conference|2016-02-03|2016-02-09|16|0
 2616|Ms. Lanette Nicolas|conference_room_small|party|2016-02-12|2016-02-18|27|41
 2617|Miss Louann Kulas|conference_room_small|conference|2016-03-05|2016-03-14|30|0
-2618|Natalia Romaguera|double_room|holiday|2016-01-12|2016-01-29|2|1
+2618|Natalia Romaguera|Double_room|holiday|2016-01-12|2016-01-29|2|1
 2619|Chantel Farrell|deluxe_room|holiday|2016-01-05|2016-01-09|2|2
 2620|Bama Schaefer DDS|conference_room_small|conference|2016-01-20|2016-01-25|35|0
 2621|Wardell Keebler|conference_room_large|conference|2016-03-04|2016-03-10|9|0
@@ -2929,7 +2929,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 2928|Laurie Feeney|double_room|business|2016-03-17|2016-03-20|2|0
 2929|Mr. Angus Gibson III|normal_room|holiday|2016-03-23|2016-03-28|3|0
 2930|Lon Schaefer II|normal_room|business|2016-01-07|2016-01-09|3|0
-2931|Hymen Kshlerin|double_room|holiday|2016-02-19|2016-02-26|4|1
+2931|Hymen Kshlerin|Double_room|holiday|2016-02-19|2016-02-26|4|1
 2932|Holly Botsford|deluxe_room|holiday|2016-03-28|2016-03-29|1|5
 2933|Annalise Rempel|deluxe_room|business|2016-03-03|2016-03-10|1|0
 2934|Ruffus Farrell|double_room|holiday|2016-03-19|2016-03-21|3|0
@@ -3204,7 +3204,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 3203|Cristobal Ziemann I|double_room|business|2016-02-25|2016-02-27|2|1
 3204|Mrs. Jo Rosenbaum|deluxe_room|business|2016-03-26|2016-03-29|1|1
 3205|Mr. Anfernee Fahey|normal_room|business|2016-01-21|2016-01-24|6|1
-3206|Mr. Lyn Hansen DDS|normal_room|holiday|2016-01-27|2016-01-31|1|2
+3206|Mr. Lyn Hansen DDS|normal_room|vacation|2016-01-27|2016-01-31|1|2
 3207|Ms. Velma Shanahan DDS|normal_room|holiday|2016-03-01|2016-03-02|4|1
 3208|Eldridge Carroll DDS|conference_room_small|wedding|2016-03-21|2016-03-25|48|46
 3209|Zita Kassulke|double_room|holiday|2016-03-11|2016-03-20|3|0
@@ -3661,7 +3661,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 3660|Joy Crona I|deluxe_room|business|2016-01-26|2016-02-03|3|0
 3661|Ashli Quitzon MD|conference_room_small|wedding|2016-02-12|2016-02-17|15|33
 3662|Mr. Rustin Treutel|conference_room_small|party|2016-01-25|2016-01-28|38|31
-3663|Allisson Daugherty|normal_room|holiday|2016-01-15|2016-01-18|4|0
+3663|Allisson Daugherty|normal_room|vacation|2016-01-15|2016-01-18|4|0
 3664|Miss Lona Kuvalis|normal_room|business|2016-01-18|2016-01-23|1|0
 3665|Mr. Jalen Kutch|double_room|business|2016-03-22|2016-03-24|1|1
 3666|Mannie Gibson|double_room|holiday|2016-01-31|2016-02-04|1|2
@@ -4589,7 +4589,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 4588|Yaretzi Rippin MD|double_room|holiday|2016-01-26|2016-02-02|1|1
 4589|Dr. Parley Halvorson|double_room|business|2016-03-25|2016-03-28|2|0
 4590|Janay Flatley|deluxe_room|holiday|2016-01-23|2016-01-28|4|3
-4591|Aleta Huels|double_room|business|2016-01-04|2016-01-05|3|0
+4591|Aleta Huels|Double_room|business|2016-01-04|2016-01-05|3|0
 4592|Van Shanahan|conference_room_small|conference|2016-02-16|2016-02-21|27|0
 4593|Dr. Lylah Kihn DDS|conference_room_large|wedding|2016-03-13|2016-03-14|26|25
 4594|Carleton Gerhold|deluxe_room|holiday|2016-03-30|2016-04-03|4|3
@@ -4608,7 +4608,7 @@ request id|client name|room type|request type|start date|end date|#adults|#child
 4607|Alaya Kub|conference_room_small|conference|2016-02-03|2016-02-07|26|0
 4608|Clem Kihn|conference_room_small|party|2016-03-29|2016-04-03|35|29
 4609|Ms. Maryjane Kub DVM|conference_room_small|conference|2016-01-20|2016-01-22|18|0
-4610|Casey Heidenreich MD|deluxe_room|holiday|2016-03-25|2016-03-27|1|1
+4610|Casey Heidenreich MD|deluxe_room|vacation|2016-03-25|2016-03-27|1|1
 4611|Jonell Ledner DVM|normal_room|business|2016-01-24|2016-01-29|3|1
 4612|Lurana Jerde PhD|normal_room|business|2016-03-17|2016-03-22|1|2
 4613|Dr. Orley Reichert|conference_room_small|wedding|2016-01-15|2016-01-21|27|26
