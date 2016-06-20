@@ -8,9 +8,10 @@ from datetime import timedelta
 
 #Local files
 import data
+import generate_requests
 
-requests_file_name = "requests"
-filename = "bookings"
+requests_file_name = generate_requests.filename
+filename = "bookings.csv"
 
 class Booking:
     def __init__(self, booking_id, room_type, start_date, end_date, request_id):

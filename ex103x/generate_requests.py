@@ -9,7 +9,7 @@ from faker import Faker
 # Local files
 import data
 
-filename = "requests"
+filename = "requests.csv"
 
 number_of_lines = 5000
 def main(args):

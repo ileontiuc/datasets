@@ -6,7 +6,7 @@ import random
 import generate_bookings
 import data
 
-filename = "services"
+filename = "services.csv"
 
 def main(args):
     bookings = ""

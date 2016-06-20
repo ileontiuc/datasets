@@ -4,7 +4,7 @@ import sys
 
 import data
 
-filename = "menu"
+filename = "menu.csv"
 
 def main(args):
     with open(filename, "w+") as f:

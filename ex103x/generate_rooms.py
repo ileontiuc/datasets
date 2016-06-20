@@ -4,7 +4,7 @@ import sys
 
 import data
 
-filename = "rooms"
+filename = "rooms.csv"
 
 def main(args):
     entry_id = 0

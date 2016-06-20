@@ -9,7 +9,7 @@ from datetime import time
 import data
 import generate_bookings
 
-filename = "food-orders"
+filename = "food-orders.csv"
 
 def calc_num_orders(num_people, days_of_stay):
     total = int(math.sqrt(num_people)) * days_of_stay / 10
